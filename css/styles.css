@@ -1,0 +1,12 @@
+#output, #output2 {
+  display: none;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  color: blue;
+  text-decoration: underline;
+}
