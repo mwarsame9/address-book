@@ -65,6 +65,7 @@ $(document).ready(function() {
   var firstNameInput = $("input#firstName").val();
   var lastNameInput = $("input#lastName").val();
   var newContact = new Contact (firstNameInput, lastNameInput);
+
   $(".anotherAddress").each(function () {
     var streetInput = $(this).find("input.street").val();
     var cityInput = $(this).find("input.city").val();
