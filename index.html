@@ -10,23 +10,51 @@
   <body>
     <div class="container">
       <h1>Address Book</h1>
-      <form id="form-one" >
-        <label for="first-name">Enter first name</label>
-        <input type="text" name="first-name" id="firstName">
-        <label for="last-name">Enter last name</label>
-        <input type="text" name="last-name" id="lastName">
-        <button type="submit" name="submit-button">Submit</button>
-
-      </form>
-      <ul id="output">
-
-      </ul>
-      <ul id="output2">
-        <h2></h2>
-        <li>First name: <span class="first-name"></span></li>
-        <li>Last name: <span class="last-name"></span></li>
-      </ul>
+      <div class="row">
+        <div class="col-md-6">
+          <form id="form-one" >
+            <label for="first-name">Enter first name</label>
+            <input type="text" name="first-name" id="firstName" class="form-control">
+            <label for="last-name">Enter last name</label>
+            <input type="text" name="last-name" id="lastName" class="form-control">
+            <div id="addressFields">
+              <div class="anotherAddress">
+                <label for="street">Enter street</label>
+                <input type="text" name="street" class="form-control street">
+                <label for="city">Enter city</label>
+                <input type="text" name="city" class="form-control city">
+                <label for="state">Enter state</label>
+                <input type="text" name="state" class="form-control state">
+                <label for="zip">Enter zip code</label>
+                <input type="text" name="zip" class="form-control zip">
+                <label for="address-type">Select address type</label>
+                <select class="form-control" class="addressType">
+                  <option selected="selected" disabled>Address type</option>
+                  <option value="Home">Home</option>
+                  <option value="Work">Work</option>
+                  <option value="Business">Business</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+            <hr>
+            <button type="submit" name="submit-button" class="btn">Submit</button>
+            <span class="btn btn-success" id="anotherButton">Add another address</span>
+            <span class="btn btn-danger" id="clearAnotherButton">Clear another address</span>
+          </form>
+          <ul id="output"></ul>
+        </div>
+        <div class="col-md-6">
+          <div id="output2">
+            <h2></h2>
+            <p>First name: <span class="first-name"></span></p>
+            <p>Last name: <span class="last-name"></span></p>
+            <p>Address(es):</p>
+            <ul id="addresses">
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-
   </body>
 </html>
